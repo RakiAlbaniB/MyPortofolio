@@ -21,7 +21,7 @@ export default function RootLayout({
       <body className={`${caveat.className} antialiased min-h-screen bg-background text-foreground transition-colors duration-300`}>
         <div className="flex flex-col md:flex-row min-h-screen">
           <Navbar />
-          <div className="flex-1 max-w-3xl w-full mx-auto min-h-screen border-border md:border-l px-6 py-10 md:py-24">
+          <div className="flex-1 max-w-3xl w-full mx-auto min-h-screen px-6 py-10 md:py-24">
             {children}
           </div>
         </div>
