@@ -11,6 +11,7 @@ const config: Config = {
     extend: {
       fontFamily: {
         caveat: ['var(--font-caveat)'],
+        playwrite: ['"Playwrite NZ Guides"', 'cursive'],
       },
       colors: {
         background: "hsl(var(--background))",
