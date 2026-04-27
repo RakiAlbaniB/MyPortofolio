@@ -10,6 +10,9 @@ export const metadata: Metadata = {
   title: "Raki Albani Badrawi | Front-End Developer",
   description: "Portfolio of Raki Albani Badrawi, Front-End Developer & UI/UX Designer bridging design and code.",
   keywords: ["Front-End Developer", "UI/UX Designer", "Portfolio", "Raki Albani Badrawi", "Next.js", "React", "Tailwind CSS"],
+  icons: {
+    icon: "/logo.png",
+  },
 };
 
 export default function RootLayout({
