@@ -37,7 +37,7 @@ export default function About() {
       <div className="mt-4">
         <a 
           href="#contact" 
-          className="inline-flex h-12 items-center justify-center rounded-full bg-foreground px-8 text-sm font-medium text-background transition-transform hover:scale-[1.02] active:scale-[0.98]"
+          className="inline-flex items-center justify-center text-lg font-semibold text-foreground hover:underline underline-offset-4 decoration-2 transition-all"
         >
           Let&apos;s Work Together
         </a>
