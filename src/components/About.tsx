@@ -1,14 +1,17 @@
 import TechCarousel from "./TechCarousel";
+import Image from "next/image";
 
 export default function About() {
   return (
     <section id="about" className="flex flex-col gap-6 animate-fade-in-up">
       <div className="space-y-5">
         <div className="relative w-24 h-24 md:w-28 md:h-28 rounded-full overflow-hidden border border-border bg-muted">
-          <img 
+          <Image 
             src="/profile.jpeg" 
             alt="Raki Albani Badrawi"
-            className="w-full h-full object-cover"
+            fill
+            className="object-cover"
+            sizes="(max-width: 768px) 96px, 112px"
           />
         </div>
 
