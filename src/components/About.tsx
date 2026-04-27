@@ -30,7 +30,7 @@ export default function About() {
 
       <div className="space-y-4 max-w-2xl mt-2 text-base md:text-lg leading-relaxed text-muted-foreground">
         <p>
-          I’m a Front-End Developer with a strong foundation in HTML, CSS, and JavaScript, combined with hands-on experience in UI/UX design. I’ve worked on multiple real-world projects, from designing user flows in Figma to building full web applications using Laravel and MySQL.
+          I’m a Front-End Developer with a strong foundation in HTML, CSS, and JavaScript, combined with hands-on experience in UI/UX design. I’ve worked on multiple projects, from designing user flows in Figma to building full web applications using Laravel and MySQL.
         </p>
         <p>
           Being self-driven, I enjoy turning ideas into real, user-centered digital experiences and am fully capable of building full projects independently.
