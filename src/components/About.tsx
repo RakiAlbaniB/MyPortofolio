@@ -23,7 +23,7 @@ export default function About() {
             </svg>
           </div>
           <p className="text-base text-muted-foreground font-medium">
-            Front-End Developer &middot; UI/UX-Informed
+            full stack developer
           </p>
         </div>
       </div>
