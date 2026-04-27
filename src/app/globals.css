@@ -4,21 +4,12 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 0 0% 7%;
-    --muted: 0 0% 96%;
-    --muted-foreground: 0 0% 40%;
-    --border: 0 0% 90%;
-    --card: 0 0% 100%;
-  }
-
-  .dark {
-    --background: 0 0% 7%;
-    --foreground: 0 0% 98%;
-    --muted: 0 0% 15%;
-    --muted-foreground: 0 0% 60%;
-    --border: 0 0% 20%;
-    --card: 0 0% 10%;
+    --background: 33 56% 88%; /* #f3e3d0 */
+    --foreground: 208 38% 25%; /* Darker blue for readability */
+    --muted: 32 24% 76%; /* #d2c4b4 */
+    --muted-foreground: 208 38% 40%;
+    --border: 32 24% 76%; /* #d2c4b4 */
+    --card: 198 44% 76%; /* #aacddc */
   }
 
   html {
