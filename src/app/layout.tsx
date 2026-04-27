@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Caveat } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
 
-const inter = Inter({ subsets: ["latin"] });
+const caveat = Caveat({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Raki Albani Badrawi | Front-End Developer",
@@ -17,9 +18,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.className} antialiased min-h-screen bg-background text-foreground transition-colors duration-300`}>
-        <div className="max-w-3xl mx-auto min-h-screen border-y md:border-y-0 md:border-x border-border px-6 py-16 md:py-24">
-          {children}
+      <body className={`${caveat.className} antialiased min-h-screen bg-background text-foreground transition-colors duration-300`}>
+        <div className="flex flex-col md:flex-row min-h-screen">
+          <Navbar />
+          <div className="flex-1 max-w-3xl w-full mx-auto min-h-screen border-border md:border-l px-6 py-10 md:py-24">
+            {children}
+          </div>
         </div>
       </body>
     </html>
