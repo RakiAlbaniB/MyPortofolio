@@ -7,7 +7,7 @@ const fredoka = Fredoka({ subsets: ["latin"], variable: "--font-fredoka" });
 const caveat = Caveat({ subsets: ["latin"], variable: "--font-caveat" });
 
 export const metadata: Metadata = {
-  title: "Raki Albani Badrawi | Front-End Developer",
+  title: "Raki Albani|~ Portofolio ~",
   description: "Portfolio of Raki Albani Badrawi, Front-End Developer & UI/UX Designer bridging design and code.",
   keywords: ["Front-End Developer", "UI/UX Designer", "Portfolio", "Raki Albani Badrawi", "Next.js", "React", "Tailwind CSS"],
 };
