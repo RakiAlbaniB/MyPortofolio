@@ -42,7 +42,7 @@ export default function About() {
           href="#contact" 
           className="inline-flex items-center justify-center text-lg font-semibold text-foreground hover:underline underline-offset-4 decoration-2 transition-all"
         >
-          Let&apos;s Work Together
+          catch me over here
         </a>
       </div>
 
