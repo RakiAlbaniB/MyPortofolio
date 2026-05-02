@@ -33,9 +33,21 @@ export default function Contact() {
     <section id="contact" className="flex flex-col gap-8 pb-24 opacity-0 animate-fade-in-up" style={{ animationDelay: "400ms" }}>
       <div className="space-y-3">
         <h2 className="font-caveat text-3xl md:text-4xl font-bold tracking-tight">Contact</h2>
-        <p className="text-foreground text-xl md:text-2xl font-medium tracking-tight">
-          Let&apos;s build something impactful together.
-        </p>
+        <div className="bg-zinc-900 dark:bg-black p-6 rounded-xl overflow-x-auto no-scrollbar shadow-inner border border-white/5 relative">
+          <pre className="text-zinc-500 dark:text-zinc-400 text-[5px] md:text-[8px] leading-none font-mono whitespace-pre select-none">
+{`/**
+ * 88888888ba                88  88           88            ,ad8888ba,                             88      ad88888ba                          ad88     ad88  
+ * 88      "8b               ""  88           88           d8"'    \`"8b                            88     d8"     "8b  ,d                    d8"      d8"    
+ * 88      ,8P                   88           88          d8'                                      88     Y8,          88                    88       88     
+ * 88aaaaaa8P'  88       88  88  88   ,adPPYb,88          88              ,adPPYba,    ,adPPYba,   88     \`Y8aaaaa,  MM88MMM  88       88  MM88MMM  MM88MMM  
+ * 88""""""8b,  88       88  88  88  a8"    \`Y88          88             a8"     "8a  a8"     "8a  88       \`"""""8b,  88     88       88    88       88     
+ * 88      \`8b  88       88  88  88  8b       88  aaa     Y8,            8b       d8  8b       d8  88             \`8b  88     88       88    88       88     
+ * 88      a8P  "8a,   ,a88  88  88  "8a,   ,d88  "88      Y8a.    .a8P  "8a,   ,a8"  "8a,   ,a8"  88     Y8a     a8P  88,    "8a,   ,a88    88       88     
+ * 88888888P"    \`"YbbdP'Y8  88  88   \`"8bbdP"Y8  d8'       \`"Y8888Y"'    \`"YbbdP"'    \`"YbbdP"'   88      "Y88888P"   "Y888   \`"YbbdP'Y8    88       88     
+ *                                               8"                                                                                                          
+ */`}
+          </pre>
+        </div>
       </div>
 
       <div className="flex gap-4">
