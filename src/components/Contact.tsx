@@ -33,8 +33,8 @@ export default function Contact() {
     <section id="contact" className="flex flex-col gap-8 pb-24 opacity-0 animate-fade-in-up" style={{ animationDelay: "400ms" }}>
       <div className="space-y-3">
         <h2 className="font-caveat text-3xl md:text-4xl font-bold tracking-tight">Contact</h2>
-        <div className="bg-zinc-900 dark:bg-black p-6 rounded-xl overflow-x-auto no-scrollbar shadow-inner border border-white/5 relative">
-          <pre className="text-zinc-500 dark:text-zinc-400 text-[5px] md:text-[8px] leading-none font-mono whitespace-pre select-none">
+        <div className="bg-[#FEFD99] dark:bg-black p-6 rounded-xl overflow-x-auto no-scrollbar shadow-inner border border-zinc-900/10 dark:border-white/5 relative">
+          <pre className="text-zinc-800 dark:text-zinc-400 text-[5px] md:text-[8px] leading-none font-mono whitespace-pre select-none">
 {`/**
  * 88888888ba                88  88           88            ,ad8888ba,                             88      ad88888ba                          ad88     ad88  
  * 88      "8b               ""  88           88           d8"'    \`"8b                            88     d8"     "8b  ,d                    d8"      d8"    

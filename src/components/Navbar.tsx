@@ -1,6 +1,13 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
+  const pathname = usePathname();
+
+  const isBlog = pathname === "/blog";
+
   return (
     <nav className="font-caveat w-full md:w-64 md:fixed md:left-0 md:top-0 p-6 md:p-8 flex flex-col items-center md:items-start justify-center bg-background z-50 h-auto md:h-screen">
       {/* Centered Content Block */}
@@ -14,16 +21,16 @@ export default function Navbar() {
         {/* Middle Section: Links */}
         <ul className="flex md:flex-col gap-4 md:gap-6 text-xl md:text-3xl">
           <li>
-            <Link href="/#about" className="hover:text-primary transition-colors">About</Link>
+            <Link href="/#about" className={`${!isBlog ? 'text-zinc-900 dark:text-white font-bold' : 'text-zinc-400 hover:text-zinc-900 dark:hover:text-white'} transition-all`}>About</Link>
           </li>
           <li>
-            <Link href="/#projects" className="hover:text-primary transition-colors">Projects</Link>
+            <Link href="/#projects" className="text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-all">Projects</Link>
           </li>
           <li>
-            <Link href="/blog" className="hover:text-primary transition-colors">Blog</Link>
+            <Link href="/blog" className={`${isBlog ? 'text-zinc-900 dark:text-white font-bold underline decoration-zinc-300 underline-offset-8' : 'text-zinc-400 hover:text-zinc-900 dark:hover:text-white'} transition-all`}>Blog</Link>
           </li>
           <li>
-            <Link href="/#contact" className="hover:text-primary transition-colors">Contact</Link>
+            <Link href="/#contact" className="text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-all">Contact</Link>
           </li>
         </ul>
       </div>

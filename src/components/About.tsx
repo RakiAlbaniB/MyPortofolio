@@ -37,19 +37,19 @@ export default function About() {
         </p>
       </div>
 
-      <div className="mt-4 flex flex-wrap gap-6 items-center">
+      <div className="mt-4 flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6">
         <a 
           href="#contact" 
-          className="inline-flex items-center justify-center text-lg font-semibold text-foreground hover:underline underline-offset-4 decoration-2 transition-all"
+          className="inline-flex items-center text-lg font-semibold text-foreground hover:underline underline-offset-4 decoration-2 transition-all w-fit"
         >
           catch me over here
         </a>
-        <span className="text-muted-foreground font-medium italic">Or</span>
+        <span className="text-muted-foreground font-medium italic hidden sm:inline">Or</span>
         <a 
           href="https://docs.google.com/document/d/1IRs5fCc-LL2YboQbkl-bVgSDgOqoWUwE/export?format=docx" 
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center justify-center px-5 py-2.5 text-sm font-bold bg-[#F9B2D7] text-zinc-900 rounded-full hover:shadow-lg hover:-translate-y-0.5 transition-all active:scale-95"
+          className="inline-flex items-center justify-center px-6 py-2.5 text-sm font-bold bg-[#F9B2D7] text-zinc-900 rounded-full hover:shadow-lg hover:-translate-y-0.5 transition-all active:scale-95 w-fit"
         >
           check my resume .ᐟ
         </a>

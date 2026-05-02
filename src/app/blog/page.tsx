@@ -88,7 +88,7 @@ function BlogContent() {
     : posts.filter(article => article.category === activeCategory);
 
   return (
-    <main className="w-full max-w-5xl mx-auto pb-20">
+    <main className="w-full max-w-5xl mx-auto pb-20 opacity-0 animate-fade-in-up">
       {/* Header Section */}
       <header className="mb-16 space-y-6 flex flex-col md:flex-row md:items-end justify-between gap-6">
         <div className="space-y-6">
