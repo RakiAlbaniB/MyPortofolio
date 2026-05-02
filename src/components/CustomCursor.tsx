@@ -41,6 +41,7 @@ export default function CustomCursor() {
         left: `${position.x}px`,
         top: `${position.y}px`,
         transform: 'translate(-50%, -50%)',
+        willChange: 'left, top'
       }}
     >
       <div className={`transition-transform duration-200 flex items-center justify-center ${isHovering ? 'scale-150 rotate-12' : 'scale-100 rotate-0'}`}>
@@ -50,7 +51,7 @@ export default function CustomCursor() {
           viewBox="0 0 100 100" 
           fill="none" 
           xmlns="http://www.w3.org/2000/svg"
-          className="drop-shadow-xl"
+          className="drop-shadow-lg"
         >
           {/* Detailed Lettuce Leaf */}
           <path 
@@ -62,8 +63,6 @@ export default function CustomCursor() {
           <path d="M50 90V25" stroke="#166534" strokeWidth="3" strokeLinecap="round" />
           <path d="M50 80C60 70 75 65 85 60" stroke="#166534" strokeWidth="2" strokeLinecap="round" />
           <path d="M50 80C40 70 25 65 15 60" stroke="#166534" strokeWidth="2" strokeLinecap="round" />
-          <path d="M50 60C62 50 78 45 88 40" stroke="#166534" strokeWidth="2" strokeLinecap="round" />
-          <path d="M50 60C38 50 22 45 12 40" stroke="#166534" strokeWidth="2" strokeLinecap="round" />
         </svg>
       </div>
     </div>

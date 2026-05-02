@@ -1,3 +1,6 @@
+"use client";
+
+import { useRef } from "react";
 import ProjectCard, { ProjectCardProps } from "./ProjectCard";
 
 const projects: ProjectCardProps[] = [
@@ -32,13 +35,49 @@ const projects: ProjectCardProps[] = [
 ];
 
 export default function Projects() {
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  const scroll = (direction: 'left' | 'right') => {
+    if (scrollRef.current) {
+      const scrollAmount = 400;
+      scrollRef.current.scrollBy({
+        left: direction === 'left' ? -scrollAmount : scrollAmount,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   return (
     <section id="projects" className="flex flex-col gap-8 opacity-0 animate-fade-in-up" style={{ animationDelay: "200ms" }}>
-      <h2 className="font-caveat text-3xl md:text-4xl font-bold tracking-tight">Projects</h2>
+      <div className="flex items-end justify-between">
+        <h2 className="font-caveat text-3xl md:text-4xl font-bold tracking-tight">Projects</h2>
+        
+        <div className="flex gap-3">
+          <button 
+            onClick={() => scroll('left')}
+            className="flex items-center justify-center w-10 h-10 rounded-full border border-zinc-900/10 dark:border-white/10 bg-zinc-900/5 dark:bg-white/5 text-zinc-500 hover:bg-zinc-900/10 dark:hover:bg-white/10 transition-all shadow-sm"
+            aria-label="Previous project"
+          >
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M15 19l-7-7 7-7" /></svg>
+          </button>
+          <button 
+            onClick={() => scroll('right')}
+            className="flex items-center justify-center w-10 h-10 rounded-full border border-zinc-900/10 dark:border-white/10 bg-zinc-900/5 dark:bg-white/5 text-zinc-500 hover:bg-zinc-900/10 dark:hover:bg-white/10 transition-all shadow-sm"
+            aria-label="Next project"
+          >
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M9 5l7 7-7 7" /></svg>
+          </button>
+        </div>
+      </div>
       
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+      <div 
+        ref={scrollRef}
+        className="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-8 -mx-4 px-4 no-scrollbar scroll-smooth"
+      >
         {projects.map((project, idx) => (
-          <ProjectCard key={idx} {...project} />
+          <div key={idx} className="min-w-[85vw] md:min-w-[400px] snap-center">
+            <ProjectCard {...project} />
+          </div>
         ))}
       </div>
     </section>
