@@ -11,6 +11,9 @@
     --muted-foreground: 208 38% 40%;
     --border: 32 24% 76%; /* #d2c4b4 */
     --card: 198 44% 76%; /* #aacddc */
+    --primary: 208 38% 25%;
+    --accent: 33 56% 50%;
+    --card-foreground: 208 38% 15%;
   }
 
   html {
@@ -21,5 +24,11 @@
     background-color: hsl(var(--background));
     color: hsl(var(--foreground));
     font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@media (min-width: 768px) {
+  *, html, body, a, button, [role="button"] {
+    cursor: none !important;
   }
 }

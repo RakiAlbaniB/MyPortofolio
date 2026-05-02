@@ -14,7 +14,7 @@ export default function TechCarousel() {
             {techStack.map((tech) => (
               <div 
                 key={tech}
-                className="flex items-center justify-center px-5 py-2 bg-background text-muted-foreground hover:text-foreground font-medium rounded-full text-sm border border-border shrink-0 transition-colors cursor-default shadow-sm"
+                className="flex items-center justify-center px-4 py-1.5 bg-zinc-900/5 dark:bg-white/5 text-zinc-500 font-bold uppercase tracking-wider text-[10px] rounded-full border border-zinc-900/10 dark:border-white/10 shrink-0 transition-colors cursor-default shadow-sm hover:bg-zinc-900/10 dark:hover:bg-white/10"
               >
                 {tech}
               </div>

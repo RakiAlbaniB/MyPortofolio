@@ -32,7 +32,7 @@ export default function Contact() {
   return (
     <section id="contact" className="flex flex-col gap-8 pb-24 opacity-0 animate-fade-in-up" style={{ animationDelay: "400ms" }}>
       <div className="space-y-3">
-        <h2 className="text-2xl font-bold tracking-tight">Contact</h2>
+        <h2 className="font-caveat text-3xl md:text-4xl font-bold tracking-tight">Contact</h2>
         <p className="text-foreground text-xl md:text-2xl font-medium tracking-tight">
           Let&apos;s build something impactful together.
         </p>
@@ -45,7 +45,7 @@ export default function Contact() {
             href={link.href}
             target="_blank"
             rel="noopener noreferrer"
-            className="group flex items-center justify-center w-12 h-12 rounded-full border border-border bg-card text-foreground hover:bg-foreground hover:text-background transition-colors shadow-sm"
+            className="group flex items-center justify-center w-12 h-12 rounded-full border border-zinc-900/10 dark:border-white/10 bg-zinc-900/5 dark:bg-white/5 text-zinc-500 hover:bg-zinc-900/10 dark:hover:bg-white/10 hover:text-zinc-900 dark:hover:text-white transition-all shadow-sm"
             aria-label={link.name}
           >
             {link.icon}
