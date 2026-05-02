@@ -1,14 +1,16 @@
 "use client";
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 
 export default function CustomCursor() {
-  const [position, setPosition] = useState({ x: -100, y: -100 });
+  const cursorRef = useRef<HTMLDivElement>(null);
   const [isHovering, setIsHovering] = useState(false);
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
-      setPosition({ x: e.clientX, y: e.clientY });
+      if (cursorRef.current) {
+        cursorRef.current.style.transform = `translate3d(${e.clientX}px, ${e.clientY}px, 0)`;
+      }
     };
 
     const handleMouseOver = (e: MouseEvent) => {
@@ -36,10 +38,12 @@ export default function CustomCursor() {
 
   return (
     <div 
-      className="fixed pointer-events-none z-[99999] hidden md:block"
+      ref={cursorRef}
+      className="fixed top-0 left-0 pointer-events-none z-[99999] hidden md:block"
       style={{ 
-        transform: `translate3d(calc(${position.x}px - 50%), calc(${position.y}px - 50%), 0)`,
-        willChange: 'transform'
+        willChange: 'transform',
+        marginLeft: '-12px',
+        marginTop: '-12px'
       }}
     >
       <div className={`transition-transform duration-200 flex items-center justify-center ${isHovering ? 'scale-150 rotate-12' : 'scale-100 rotate-0'}`}>

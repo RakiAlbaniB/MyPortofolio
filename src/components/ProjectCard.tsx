@@ -8,7 +8,7 @@ export interface ProjectCardProps {
 
 export default function ProjectCard({ title, tech, problem, solution, impact }: ProjectCardProps) {
   return (
-    <div className="group flex flex-col p-6 rounded-2xl border border-zinc-900/10 dark:border-white/10 bg-zinc-900/5 dark:bg-white/5 transition-all duration-300 hover:bg-zinc-900/10 dark:hover:bg-white/10 hover:shadow-xl hover:-translate-y-1 relative overflow-hidden">
+    <div className="group flex flex-col p-6 rounded-2xl border border-zinc-900/10 dark:border-white/10 bg-zinc-900/5 dark:bg-white/5 transition-all duration-300 hover:bg-zinc-900/10 dark:hover:bg-white/10 hover:shadow-xl hover:-translate-y-1 relative overflow-hidden will-change-transform">
       <div className="space-y-6 z-10 relative">
         <div className="space-y-3">
           <h3 className="font-bold text-2xl tracking-tight text-zinc-900 dark:text-white transition-colors">{title}</h3>

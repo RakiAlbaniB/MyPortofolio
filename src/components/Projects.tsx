@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 import ProjectCard, { ProjectCardProps } from "./ProjectCard";
 
 const projects: ProjectCardProps[] = [
@@ -37,6 +37,25 @@ const projects: ProjectCardProps[] = [
 export default function Projects() {
   const scrollRef = useRef<HTMLDivElement>(null);
 
+  useEffect(() => {
+    const el = scrollRef.current;
+    if (el) {
+      const onWheel = (e: WheelEvent) => {
+        // Only intercept if vertical scroll is dominant
+        if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+          e.preventDefault();
+          el.scrollTo({
+            left: el.scrollLeft + e.deltaY * 2.5,
+            behavior: "auto"
+          });
+        }
+      };
+      
+      el.addEventListener("wheel", onWheel, { passive: false });
+      return () => el.removeEventListener("wheel", onWheel);
+    }
+  }, []);
+
   const scroll = (direction: 'left' | 'right') => {
     if (scrollRef.current) {
       const scrollAmount = 400;
@@ -72,7 +91,7 @@ export default function Projects() {
       
       <div 
         ref={scrollRef}
-        className="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-8 -mx-4 px-4 no-scrollbar scroll-smooth"
+        className="flex overflow-x-auto snap-x snap-proximity gap-6 pb-8 -mx-4 px-4 no-scrollbar scroll-smooth"
       >
         {projects.map((project, idx) => (
           <div key={idx} className="min-w-[85vw] md:min-w-[400px] snap-center">

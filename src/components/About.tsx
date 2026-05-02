@@ -37,12 +37,20 @@ export default function About() {
         </p>
       </div>
 
-      <div className="mt-4">
+      <div className="mt-4 flex flex-wrap gap-6 items-center">
         <a 
           href="#contact" 
           className="inline-flex items-center justify-center text-lg font-semibold text-foreground hover:underline underline-offset-4 decoration-2 transition-all"
         >
           catch me over here
+        </a>
+        <a 
+          href="https://docs.google.com/document/d/1IRs5fCc-LL2YboQbkl-bVgSDgOqoWUwE/export?format=docx" 
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center justify-center px-5 py-2.5 text-sm font-bold bg-[#F9B2D7] text-zinc-900 rounded-full hover:shadow-lg hover:-translate-y-0.5 transition-all active:scale-95"
+        >
+          check my resume .ᐟ
         </a>
       </div>
 
