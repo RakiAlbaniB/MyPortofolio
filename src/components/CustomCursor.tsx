@@ -38,10 +38,8 @@ export default function CustomCursor() {
     <div 
       className="fixed pointer-events-none z-[99999] hidden md:block"
       style={{ 
-        left: `${position.x}px`,
-        top: `${position.y}px`,
-        transform: 'translate(-50%, -50%)',
-        willChange: 'left, top'
+        transform: `translate3d(calc(${position.x}px - 50%), calc(${position.y}px - 50%), 0)`,
+        willChange: 'transform'
       }}
     >
       <div className={`transition-transform duration-200 flex items-center justify-center ${isHovering ? 'scale-150 rotate-12' : 'scale-100 rotate-0'}`}>
