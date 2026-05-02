@@ -44,6 +44,7 @@ export default function About() {
         >
           catch me over here
         </a>
+        <span className="text-muted-foreground font-medium italic">Or</span>
         <a 
           href="https://docs.google.com/document/d/1IRs5fCc-LL2YboQbkl-bVgSDgOqoWUwE/export?format=docx" 
           target="_blank"
